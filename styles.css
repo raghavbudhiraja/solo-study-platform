@@ -1,0 +1,210 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Background Style */
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    max-width: 850px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Header Styling */
+  header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    color: #ff7b00;
+    text-transform: uppercase;
+    animation: glowText 2s infinite alternate;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-top: 10px;
+  }
+  
+  /* Timers */
+  .timers input, .quote-section textarea {
+    padding: 15px;
+    font-size: 1.1rem;
+    width: 220px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid #444;
+    background: #222;
+    color: #fff;
+  }
+  
+  .timer-display {
+    font-size: 2rem;
+    margin-top: 20px;
+    font-weight: 700;
+    color: #ff7b00;
+    animation: bounceIn 1s ease-in-out;
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-btn {
+    background: linear-gradient(135deg, #ff7b00, #ff3d00);
+    color: white;
+  }
+  
+  .secondary-btn {
+    background: #444;
+    color: #fff;
+  }
+  
+  .stat-btn {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .background-btn {
+    background: #333;
+    color: #ff7b00;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Goals Section */
+  .goals-lists {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .goal-list {
+    width: 45%;
+    margin-top: 20px;
+  }
+  
+  .goal-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin: 10px 0;
+  }
+  
+  .goal-item button {
+    background: #ff7b00;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .goal-item button:hover {
+    background: #ff3d00;
+  }
+  
+  /* YouTube Section */
+  .youtube-frame iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 15px;
+  }
+  
+  /* Quote Section */
+  .quote-text {
+    font-size: 1.5rem;
+    color: #ff7b00;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite alternate;
+  }
+  
+  .quote-section button {
+    margin-top: 15px;
+  }
+  
+  .stats-result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .background-options button {
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .background-options button:hover {
+    background: #ff7b00;
+  }
+  
+  /* Animations */
+  @keyframes glowText {
+    0% {
+      color: #ff7b00;
+    }
+    50% {
+      color: #ff3d00;
+    }
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Together</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="background" class="background"></div>
+
+  <div class="container">
+    <header>
+      <h1>Solo Study Platform</h1>
+      <p>Maximize Your Focus by Raghav Budhiraja</p>
+    </header>
+
+    <section class="timers">
+      <div>
+        <input type="number" id="focusTime" placeholder="Focus Time (min)" class="input-field">
+        <input type="number" id="breakTime" placeholder="Break Time (min)" class="input-field">
+        <button onclick="startTimer()" class="btn primary-btn">Start Timer</button>
+      </div>
+      <h2 id="timerDisplay" class="timer-display">00:00</h2>
+    </section>
+
+    <section class="goals">
+      <h2>Session Goals</h2>
+      <textarea id="goalInput" class="input-field" placeholder="Type your goal..."></textarea>
+      <button onclick="addGoal()" class="btn secondary-btn">Add Goal</button>
+      <div class="goals-lists">
+        <div class="goal-list" id="openGoals">
+          <h3>Open Goals</h3>
+        </div>
+        <div class="goal-list" id="completedGoals">
+          <h3>Completed Goals</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="youtube">
+      <h2>Embed YouTube Video</h2>
+      <input type="text" id="youtubeUrl" class="input-field" placeholder="Paste YouTube URL">
+      <button onclick="addYoutube()" class="btn primary-btn">Embed Video</button>
+      <div id="youtubeFrame" class="youtube-frame"></div>
+    </section>
+
+    <!-- Motivational Quote Section -->
+    <section class="quote-section">
+      <h2>Motivational Quote</h2>
+      <p id="quote" class="quote-text">"Success is the sum of small efforts, repeated day in and day out."</p>
+      <div>
+        <button onclick="shuffleQuote()" class="btn secondary-btn">Shuffle</button>
+        <button onclick="toggleQuote()" class="btn secondary-btn">Hide</button>
+      </div>
+    </section>
+
+    <!-- Study Stats Section -->
+    <section class="study-stats">
+      <h2>Study Stats</h2>
+      <div class="stats">
+        <button onclick="showStats('today')" class="btn stat-btn">Today</button>
+        <button onclick="showStats('thisWeek')" class="btn stat-btn">This Week</button>
+        <button onclick="showStats('thisMonth')" class="btn stat-btn">This Month</button>
+        <button onclick="showStats('allTime')" class="btn stat-btn">All Time</button>
+      </div>
+      <div id="studyStatsResult" class="stats-result">
+        <p>Study time: <span id="studyTime">0 hrs 0 min</span></p>
+      </div>
+    </section>
+
+    <!-- Background Options -->
+    <section class="background-options">
+      <button onclick="setBackground('anime')" class="btn background-btn">Anime</button>
+      <button onclick="setBackground('nature')" class="btn background-btn">Nature</button>
+      <button onclick="setBackground('library')" class="btn background-btn">Library</button>
+      <button onclick="shuffleBackground()" class="btn background-btn">Shuffle</button>
+      <button onclick="hideBackground()" class="btn background-btn">Hide</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
